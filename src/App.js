@@ -1,12 +1,17 @@
 import React from 'react';
-import ComptrollerData from './components/ComptrollerData';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Register from './components/Register';
+import Login from './components/Login';
+import HomePage from './pages/HomePage';
+
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<ComptrollerData />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<HomePage />} />
       </Routes>
     </Router>
   );

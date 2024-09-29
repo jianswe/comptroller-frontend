@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // eslint-disable-next-line no-undef
-const baseUrl = process.env.NODE_ENV === 'production' ? process.env.COMPTROLLER_API_URL_PROD : process.env.COMPTROLLER_API_URL_LOCAL;
+const baseUrl = process.env.NODE_ENV === 'production' ? process.env.REACT_APP_API_URL_PROD : process.env.REACT_APP_API_URL_LOCAL;
 
 const API_URL = `${baseUrl}/api/auth`; 
 

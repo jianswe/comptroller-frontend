@@ -1,6 +1,9 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5086/api/auth'; // Replace with your actual API URL
+// eslint-disable-next-line no-undef
+const baseUrl = process.env.NODE_ENV === 'production' ? process.env.COMPTROLLER_API_URL_PROD : process.env.COMPTROLLER_API_URL_LOCAL;
+
+const API_URL = `${baseUrl}/api/auth`; 
 
 export const register = async (userData) => {
     return axios.post(`${API_URL}/register`, userData);

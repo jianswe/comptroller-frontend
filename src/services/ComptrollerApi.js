@@ -1,4 +1,7 @@
-const API_URL = 'http://localhost:5086/api/taxreports'; // Replace with your actual API URL
+// eslint-disable-next-line no-undef
+const baseUrl = process.env.NODE_ENV === 'production' ? process.env.COMPTROLLER_API_URL_PROD : process.env.COMPTROLLER_API_URL_LOCAL;
+
+const API_URL = `${baseUrl}/api/taxreports`; 
 
 const fetchComptrollerData = async (apiUrl = API_URL, httpMethod = 'GET', dataToSend = '') => {
   const token = localStorage.getItem('userToken'); // Retrieve token from localStorage
